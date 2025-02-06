@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Perfil</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #141414;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+
+        .perfis {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .perfil {
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+        .perfil img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: .3em solid transparent;
+            border-radius: 10px;
+        }
+
+
+        .perfil p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            transition: color 0.3s ease;
+        }
+
+
+        .perfil:hover img {
+            transform: scale(1.1);
+            border: .3em solid white;
+        }
+
+        .perfil:hover p {
+            color: white;
+        }
+
+
+        .gerenciar {
+            margin-top: 25px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: none;
+            border: 2px solid #a0a0a0;
+            color: #a0a0a0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+        .gerenciar:hover {
+            color: white;
+            border: 2px solid white;
+        }
+
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #141414;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            display: none;
+        }
+
+        #loader img{
+            position: absolute;
+            width: 5%;
+        }
+
+        .spinner {
+            width: 200px;
+            height: 200px;
+            border: 15px solid #ff0000;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quem está assistindo?</h1>
+        <div class="perfis">
+            <div class="perfil">
+                <img id="meuBotao1" src="images/diogo.jpg" alt="user-ico">
+                <p>Diogo</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao2" src="images/guilherme.jpg" alt="user-ico">
+                <p>Guilherme</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao3" src="images/davi.jpg" alt="user-ico">
+                <p>Davi</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao4" src="images/fernando.jpg" alt="user-ico">
+                <p>Fernando</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao5" src="images/wesley.jpg" alt="user-ico">
+                <p>Wesley</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao6" src="images/dani.jpg" alt="user-ico">
+                <p>Dani</p>
+            </div>
+            <div class="perfil">
+                <img id="meuBotao7" src="images/dudu.jpg" alt="user-ico">
+                <p>Dudu</p>
+            </div>
+        </div>
+        <a href="easter-egg.html"><button class="gerenciar">GERENCIAR PERFIS</button></a>
+
+    </div>
+
+    <div id="loader">
+        <img src="images/user.png" alt="">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        document.getElementById("meuBotao1").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao2").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao3").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao4").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao5").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao6").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+
+        document.getElementById("meuBotao7").addEventListener("click", function () {
+            // Exibe o loader
+            document.getElementById("loader").style.display = "flex";
+
+            // Aguarda 3 segundos antes de redirecionar
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
